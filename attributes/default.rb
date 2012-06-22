@@ -19,7 +19,7 @@
 #
 
 case node['platform']
-when 'debian', 'ubuntu'
+when 'centos', 'debian', 'redhat', 'scientific', 'ubuntu'
   default['gecode']['install_method'] = 'package'
 else
   default['gecode']['install_method'] = 'source'

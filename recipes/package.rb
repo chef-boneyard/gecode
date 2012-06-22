@@ -44,6 +44,19 @@ when 'ubuntu','debian'
   apt_package 'libgecode-dev' do
     action :upgrade
   end
+when 'centos', 'redhat', 'scientific'
+
+  platform_release = node[:platform_version].to_f.floor
+
+  yum_repository 'rbel' do
+    name "rbel#{platform_release}"
+    url "http://rbel.co/rbel#{platform_release}"
+    description 'Ruby and Opscode Chef packages for RHEL distributions'
+    action :add
+  end
+
+  package 'gecode'
+  package 'gecode-devel'
 
 else
   raise "This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform"
