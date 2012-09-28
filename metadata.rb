@@ -9,6 +9,6 @@ version          "1.2.0"
   supports os
 end
 
-%w{ build-essential apt }.each do |cb|
+%w{ build-essential apt yum }.each do |cb|
   depends cb
 end
