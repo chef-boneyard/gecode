@@ -10,7 +10,7 @@ Platform
 --------
 
 * Debian, Ubuntu
-* Red Hat, CentOS, Fedora
+* Red Hat, CentOS, Scientific, Fedora
 * Mac OS X 10.6+
 
 Cookbooks

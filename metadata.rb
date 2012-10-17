@@ -5,10 +5,10 @@ description      "Installs gecode"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "1.2.0"
 
-%w{ debian ubuntu redhat centos fedora mac_os_x }.each do |os|
+%w{ debian ubuntu redhat centos scientific fedora mac_os_x }.each do |os|
   supports os
 end
 
-%w{ build-essential apt }.each do |cb|
+%w{ build-essential apt yum }.each do |cb|
   depends cb
 end
