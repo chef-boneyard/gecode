@@ -21,7 +21,7 @@
 case node['platform']
 when 'debian', 'ubuntu', 'fedora'
   default['gecode']['install_method'] = 'package'
-when 'redhat', 'centos'
+when 'redhat', 'centos', 'scientific'
   if node['platform_version'].to_f >= 6
     default['gecode']['install_method'] = 'package'
   else

@@ -45,9 +45,9 @@ when 'ubuntu','debian'
     action :upgrade
   end
 
-when 'redhat','centos','fedora'
+when 'redhat','centos','fedora','scientific'
 
-  if (platform?("redhat") || platform?("centos"))
+  if (platform?("redhat") || platform?("centos") || platform?("scientific"))
     if node.platform_version.to_f < 6.0
       raise "This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform"
     else
