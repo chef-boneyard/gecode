@@ -1,3 +1,7 @@
+## v1.3.0:
+
+* [COOK-1713] - switch to gecode package in Fedora, EPEL >= 6
+
 ## v1.2.0:
 
 * [COOK-663] - upgrade libgecode-dev package
