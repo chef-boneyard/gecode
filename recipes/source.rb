@@ -41,7 +41,7 @@ end
 
 # configure the dynamic linker, redhat only
 case node['platform_family']
-when 'rhel'
+when 'rhel', 'fedora'
   directory "/etc/ld.so.conf.d/" do
     owner "root"
     group "root"
