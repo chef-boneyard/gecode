@@ -1,3 +1,9 @@
+## v2.0.2:
+
+### Bug
+
+- [COOK-2959]: gecode cookbook has foodcritic failure
+
 ## v2.0.0:
 
 * [COOK-1868] - use `node['platform_family']` to handle multiple
