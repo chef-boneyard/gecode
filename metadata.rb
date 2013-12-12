@@ -14,5 +14,5 @@ end
   depends cb
 end
 
-depends 'yum', '< 3'
+depends 'yum', '< 3.0'
 
