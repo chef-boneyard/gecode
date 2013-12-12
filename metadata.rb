@@ -10,6 +10,9 @@ version          "2.0.3"
   supports os
 end
 
-%w{ build-essential apt yum }.each do |cb|
+%w{ build-essential apt }.each do |cb|
   depends cb
 end
+
+depends 'yum', '< 3'
+
