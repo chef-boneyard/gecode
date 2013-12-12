@@ -1,6 +1,11 @@
 gecode cookbook CHANGELOG
 =========================
 
+v2.0.6
+------
+Updating CHANGELOG for stove compat
+
+
 v2.0.2
 ------
 ### Bug
