@@ -1,6 +1,11 @@
 gecode cookbook CHANGELOG
 =========================
 
+v2.0.8
+------
+fixing metadata version error. locking to 3.0"
+
+
 v2.0.6
 ------
 Updating CHANGELOG for stove compat
