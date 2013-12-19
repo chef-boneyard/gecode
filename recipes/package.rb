@@ -26,16 +26,16 @@ when 'debian'
   include_recipe 'apt'
 
   # use opscode apt repo for older releases
-  if (platform?("debian") && (node['platform_version'].to_f < 7.0)) ||
-      (platform?("ubuntu") && (node['platform_version'].to_f < 11.0))
+  if (platform?('debian') && (node['platform_version'].to_f < 7.0)) ||
+      (platform?('ubuntu') && (node['platform_version'].to_f < 11.0))
 
     # add Opscode's apt repo to sources
-    apt_repository "opscode" do
-      uri "http://apt.opscode.com"
-      components ["main"]
+    apt_repository 'opscode' do
+      uri 'http://apt.opscode.com'
+      components ['main']
       distribution node['lsb']['codename']
-      key "2940ABA983EF826A"
-      keyserver "pgpkeys.mit.edu"
+      key '2940ABA983EF826A'
+      keyserver 'pgpkeys.mit.edu'
       action :add
     end
 
@@ -45,16 +45,16 @@ when 'debian'
     action :upgrade
   end
 
-when 'rhel','fedora'
+when 'rhel', 'fedora'
 
-  if (platform?("redhat") || platform?("centos") || platform?("scientific"))
+  if platform?('redhat') || platform?('centos') || platform?('scientific')
     if node['platform_version'].to_f < 6.0
-      raise "This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform"
+      fail 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
     else
-      include_recipe 'yum::epel'
+      include_recipe 'yum-epel'
     end
-  elsif (platform?("fedora") && (node['platform_version'].to_f < 16.0))
-      raise "This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform"
+  elsif platform?('fedora') && (node['platform_version'].to_f < 16.0)
+    fail 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
   end
 
   package 'gecode-devel' do
@@ -62,5 +62,5 @@ when 'rhel','fedora'
   end
 
 else
-  raise "This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform"
+  fail 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
 end

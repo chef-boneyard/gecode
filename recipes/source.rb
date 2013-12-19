@@ -27,9 +27,9 @@ remote_file "#{Chef::Config[:file_cache_path]}/gecode-#{version}.tar.gz" do
   mode 0644
 end
 
-lib_name = value_for_platform("mac_os_x" => { "default" => "libgecodekernel.dylib" }, "default" => "libgecodekernel.so")
+lib_name = value_for_platform('mac_os_x' => { 'default' => 'libgecodekernel.dylib' }, 'default' => 'libgecodekernel.so')
 
-bash "build gecode from source" do
+bash 'build gecode from source' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
   tar zxvf gecode-#{version}.tar.gz
@@ -42,18 +42,18 @@ end
 # configure the dynamic linker, redhat only
 case node['platform_family']
 when 'rhel', 'fedora'
-  directory "/etc/ld.so.conf.d/" do
-    owner "root"
-    group "root"
+  directory '/etc/ld.so.conf.d/' do
+    owner 'root'
+    group 'root'
     mode 0755
   end
-  execute "ldconfig" do
-    command "ldconfig"
+  execute 'ldconfig' do
+    command 'ldconfig'
     action :nothing
   end
 
-  file "/etc/ld.so.conf.d/gecode.conf" do
-    content "/usr/local/lib "
-    notifies :run, "execute[ldconfig]"
+  file '/etc/ld.so.conf.d/gecode.conf' do
+    content '/usr/local/lib '
+    notifies :run, 'execute[ldconfig]'
   end
 end
