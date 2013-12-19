@@ -1,6 +1,13 @@
 gecode cookbook CHANGELOG
 =========================
 
+v2.1.0
+------
+- Updating to use yum ~> 3.0
+- Fixing up style for rubocop
+- Updating test-kitchen harness
+
+
 v2.0.8
 ------
 fixing metadata version error. locking to 3.0"
