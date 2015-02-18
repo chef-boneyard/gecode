@@ -16,7 +16,7 @@ Platform
 Cookbooks
 ---------
 
-* apt - for installing packages from apt.opscode.com
+* apt - for installing packages from apt.chef.io
 * build-essential - for compiling from source
 
 Attributes
@@ -39,7 +39,7 @@ Include default recipe in a run list, to get some Gecode installed. Installs Gec
 package
 -------
 
-Installs Gecode from packages.  On Debian and Ubuntu systems, the recipe will attempt to install packages from apt.opscode.com. It uses the apt repository LWRP in Opscode's apt cookbook to enable the repository.  For releases after Debian 7.0 (Wheezy) and Ubuntu 11.04 (Natty), Gecode 3.5.0+ exists in the main repositories.
+Installs Gecode from packages.  On Debian and Ubuntu systems, the recipe will attempt to install packages from apt.chef.io. It uses the apt repository LWRP in Chef's apt cookbook to enable the repository.  For releases after Debian 7.0 (Wheezy) and Ubuntu 11.04 (Natty), Gecode 3.5.0+ exists in the main repositories.
 
 source
 ------
@@ -49,12 +49,12 @@ Installs Gecode from source.  Note that compiling gecode takes a long time, up t
 License and Author
 ==================
 
-Author:: Chris Walters (<cw@opscode.com>)
-Author:: Nuo Yan (<nuo@opscode.com>)
-Author:: Joshua Timberman (<joshua@opscode.com>)
-Author:: Seth Chisamore (<schisamo@opscode.com>)
+Author:: Chris Walters (<cw@chef.io>)
+Author:: Nuo Yan (<nuo@chef.io>)
+Author:: Joshua Timberman (<joshua@chef.io>)
+Author:: Seth Chisamore (<schisamo@chef.io>)
 
-Copyright 2009-2011, Opscode, Inc.
+Copyright 2009-2011, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,12 +1,12 @@
 #
-# Author:: Christopher Walters (<cw@opscode.com>)
-# Author:: Nuo Yan (<nuo@opscode.com>)
-# Author:: Joshua Timberman (<joshua@opscode.com>)
-# Author:: Seth Chisamore (<schisamo@opscode.com>)
+# Author:: Christopher Walters (<cw@chef.io>)
+# Author:: Nuo Yan (<nuo@chef.io>)
+# Author:: Joshua Timberman (<joshua@chef.io>)
+# Author:: Seth Chisamore (<schisamo@chef.io>)
 # Cookbook Name:: gecode
 # Recipe:: package
 #
-# Copyright:: Copyright (c) 2011 Opscode, Inc.
+# Copyright:: Copyright (c) 2011 Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,13 +25,13 @@ when 'debian'
 
   include_recipe 'apt'
 
-  # use opscode apt repo for older releases
+  # use chef apt repo for older releases
   if (platform?('debian') && (node['platform_version'].to_f < 7.0)) ||
       (platform?('ubuntu') && (node['platform_version'].to_f < 11.0))
 
-    # add Opscode's apt repo to sources
-    apt_repository 'opscode' do
-      uri 'http://apt.opscode.com'
+    # add Chef's apt repo to sources
+    apt_repository 'chef' do
+      uri 'http://apt.chef.io'
       components ['main']
       distribution node['lsb']['codename']
       key '2940ABA983EF826A'
