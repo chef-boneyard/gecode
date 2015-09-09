@@ -1,5 +1,6 @@
 gecode cookbook CHANGELOG
 =========================
+This file is used to list changes made in each version of the gecode cookbook.
 
 v2.1.0
 ------
