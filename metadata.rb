@@ -16,3 +16,6 @@ end
 
 depends 'yum', '~> 3.0'
 depends 'yum-epel'
+
+source_url 'https://github.com/chef-cookbooks/gecode' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/gecode/issues' if respond_to?(:issues_url)
