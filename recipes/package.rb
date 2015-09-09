@@ -27,7 +27,7 @@ when 'debian'
 
   # use chef apt repo for older releases
   if (platform?('debian') && (node['platform_version'].to_f < 7.0)) ||
-      (platform?('ubuntu') && (node['platform_version'].to_f < 11.0))
+     (platform?('ubuntu') && (node['platform_version'].to_f < 11.0))
 
     # add Chef's apt repo to sources
     apt_repository 'chef' do

@@ -35,10 +35,10 @@ default['gecode']['url'] = 'http://www.gecode.org/download'
 default['gecode']['version'] = '3.5.0'
 default['gecode']['checksum'] = '0b2602ce647dd23814d2a7f5f0e757e09f98581b14b95aafbcd9e4c7e0ab4d2a'
 
-default['gecode']['configure_options'] = %w{
-                                          --disable-debug
-                                          --disable-dependency-tracking
-                                          --disable-qt
-                                          --prefix=/usr/local
-                                          --with-architectures=i386,x86_64
-                                          }
+default['gecode']['configure_options'] = %w(
+  --disable-debug
+  --disable-dependency-tracking
+  --disable-qt
+  --prefix=/usr/local
+  --with-architectures=i386,x86_64
+)

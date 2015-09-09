@@ -33,10 +33,10 @@ bash 'build gecode from source' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
   tar zxvf gecode-#{version}.tar.gz
-  (cd gecode-#{version} && ./configure #{node['gecode']['configure_options'].join(" ")})
+  (cd gecode-#{version} && ./configure #{node['gecode']['configure_options'].join(' ')})
   (cd gecode-#{version} && make && make install)
   EOH
-  not_if { ::File.exists?("/usr/local/lib/#{lib_name}") }
+  not_if { ::File.exist?("/usr/local/lib/#{lib_name}") }
 end
 
 # configure the dynamic linker, redhat only
