@@ -50,8 +50,11 @@ License & Authors
 -----------------
 
 Author:: Chris Walters (<cw@chef.io>)
+
 Author:: Nuo Yan (<nuo@chef.io>)
+
 Author:: Joshua Timberman (<joshua@chef.io>)
+
 Author:: Seth Chisamore (<schisamo@chef.io>)
 
 ```text
