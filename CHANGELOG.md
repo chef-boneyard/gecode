@@ -2,22 +2,35 @@ gecode cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the gecode cookbook.
 
+v2.1.2 (2015-10-20)
+-------------------
+* Added source_url and issues_url to the metadata
+* Updated the Berksfile to 3.x format
+* Updated the gitignore file
+* Test on the latest Freebsd boxes in Test Kitchen
+* Added chefignore file
+* Added Chef standard rubocop config
+* Updated Travis CI testing to use the ChefDK for up to date deps
+* Updated Gemfile with the latest testing deps
+* Updated testing and contributing docs
+* Added maintainers.md and maintainers.toml files
+* Added travis and cookbook version badges to the readme
+* Resolved Rubocop warnings
+* Added a .foodcritic file to exclude warnings
+
 v2.1.0
 ------
 - Updating to use yum ~> 3.0
 - Fixing up style for rubocop
 - Updating test-kitchen harness
 
-
 v2.0.8
 ------
 fixing metadata version error. locking to 3.0"
 
-
 v2.0.6
 ------
 Updating CHANGELOG for stove compat
-
 
 v2.0.2
 ------
