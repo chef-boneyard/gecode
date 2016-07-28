@@ -33,7 +33,7 @@ end
 
 default['gecode']['url'] = 'http://www.gecode.org/download'
 default['gecode']['version'] = '3.5.0'
-default['gecode']['checksum'] = '0b2602ce647dd23814d2a7f5f0e757e09f98581b14b95aafbcd9e4c7e0ab4d2a'
+default['gecode']['checksum'] = 'b76cc4a0a198cd241c6aff2f865dde7d25061bf6401e85ba4c97717383c0d48d'
 
 default['gecode']['configure_options'] = %w(
   --disable-debug
