@@ -22,6 +22,9 @@ platforms:
     run_list: apt::default
 
 suites:
-- name: default
+- name: package
   run_list:
   - recipe[gecode::default]
+- name: source
+  run_list:
+  - recipe[gecode::source]
