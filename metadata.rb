@@ -10,11 +10,7 @@ version          '2.1.3'
   supports os
 end
 
-%w( build-essential apt ).each do |cb|
-  depends cb
-end
-
-depends 'yum', '~> 3.0'
+depends 'build-essential'
 depends 'yum-epel'
 
 source_url 'https://github.com/chef-cookbooks/gecode'
