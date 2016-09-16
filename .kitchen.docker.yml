@@ -96,6 +96,9 @@ platforms:
       - RUN zypper --non-interactive install aaa_base perl-Getopt-Long-Descriptive
 
 suites:
-- name: default
+- name: package
   run_list:
   - recipe[gecode::default]
+- name: source
+  run_list:
+  - recipe[gecode::source]
