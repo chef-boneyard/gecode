@@ -3,7 +3,7 @@
 # Cookbook Name:: gecode
 # Recipe:: source
 #
-# Copyright:: Copyright (c) 2011 Chef Software, Inc.
+# Copyright:: Copyright (c) 2011-2016 Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ version = node['gecode']['version']
 remote_file "#{Chef::Config[:file_cache_path]}/gecode-#{version}.tar.gz" do
   source "#{node['gecode']['url']}/gecode-#{version}.tar.gz"
   checksum node['gecode']['checksum']
-  mode 0644
+  mode '0644'
 end
 
 lib_name = value_for_platform('mac_os_x' => { 'default' => 'libgecodekernel.dylib' }, 'default' => 'libgecodekernel.so')
@@ -45,7 +45,7 @@ when 'rhel', 'fedora'
   directory '/etc/ld.so.conf.d/' do
     owner 'root'
     group 'root'
-    mode 0755
+    mode '0755'
   end
   execute 'ldconfig' do
     command 'ldconfig'
