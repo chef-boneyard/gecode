@@ -15,7 +15,7 @@ Requirements
 - Mac OS X 10.6+
 
 #### Chef
-- Chef 11+
+- Chef 12.1+
 
 #### Cookbooks
 
