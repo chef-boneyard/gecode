@@ -1,61 +1,57 @@
-gecode Cookbook
-===============
+# gecode Cookbook
 
-[![Build Status](https://travis-ci.org/chef-cookbooks/gecode.svg?branch=master)](http://travis-ci.org/chef-cookbooks/gecode)
-[![Cookbook Version](https://img.shields.io/cookbook/v/gecode.svg)](https://supermarket.chef.io/cookbooks/gecode)
-
+[![Build Status](https://travis-ci.org/chef-cookbooks/gecode.svg?branch=master)](http://travis-ci.org/chef-cookbooks/gecode) [![Cookbook Version](https://img.shields.io/cookbook/v/gecode.svg)](https://supermarket.chef.io/cookbooks/gecode)
 
 Installs Gecode 3.5.0+ development package.
 
-Requirements
-------------
-#### Platforms
+## Requirements
+
+### Platforms
+
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
 - Mac OS X 10.6+
 
-#### Chef
+### Chef
+
 - Chef 12.1+
 
-#### Cookbooks
+### Cookbooks
 
-* apt - for installing packages from apt.chef.io
-* build-essential - for compiling from source
+- apt - for installing packages from apt.chef.io
+- build-essential - for compiling from source
 
-Attributes
-----------
+## Attributes
 
-* `node['gecode']['install_method']` - Specifies the recipe to use for installing gecode.
-* `node['gecode']['url']` - base url to download from. Default is the Gecode distribution server.
-* `node['gecode']['version']` - version of gecode to install.
-* `node['gecode']['checksum']` - checksum of the source tarball.
-* `node['gecode']['configure_options']` - array of options to pass to ./configure for compiling gecode.
+- `node['gecode']['install_method']` - Specifies the recipe to use for installing gecode.
+- `node['gecode']['url']` - base url to download from. Default is the Gecode distribution server.
+- `node['gecode']['version']` - version of gecode to install.
+- `node['gecode']['checksum']` - checksum of the source tarball.
+- `node['gecode']['configure_options']` - array of options to pass to ./configure for compiling gecode.
 
-Usage
------
+## Usage
 
-###default
+### default
 
 Include default recipe in a run list, to get some Gecode installed. Installs Gecode by package or source depending on the platform. The recipe is primarily used to install gecode's development package or from source in order to install the `dep_selector` gem, which needs to compile native extensions.
 
-###package
+### package
 
-Installs Gecode from packages.  On Debian and Ubuntu systems, the recipe will attempt to install packages from apt.chef.io. It uses the apt repository LWRP in Chef's apt cookbook to enable the repository.  For releases after Debian 7.0 (Wheezy) and Ubuntu 11.04 (Natty), Gecode 3.5.0+ exists in the main repositories.
+Installs Gecode from packages. On Debian and Ubuntu systems, the recipe will attempt to install packages from apt.chef.io. It uses the apt repository LWRP in Chef's apt cookbook to enable the repository. For releases after Debian 7.0 (Wheezy) and Ubuntu 11.04 (Natty), Gecode 3.5.0+ exists in the main repositories.
 
-###source
+### source
 
-Installs Gecode from source.  Note that compiling gecode takes a long time, up to ~30 minutes on a 4 core Macbook Pro.
+Installs Gecode from source. Note that compiling gecode takes a long time, up to ~30 minutes on a 4 core Macbook Pro.
 
-License & Authors
------------------
+## License & Authors
 
-Author:: Chris Walters (<cw@chef.io>)
+Author:: Chris Walters ([cw@chef.io](mailto:cw@chef.io))
 
-Author:: Nuo Yan (<nuo@chef.io>)
+Author:: Nuo Yan ([nuo@chef.io](mailto:nuo@chef.io))
 
-Author:: Joshua Timberman (<joshua@chef.io>)
+Author:: Joshua Timberman ([joshua@chef.io](mailto:joshua@chef.io))
 
-Author:: Seth Chisamore (<schisamo@chef.io>)
+Author:: Seth Chisamore ([schisamo@chef.io](mailto:schisamo@chef.io))
 
 ```text
 Copyright:: 2009-2015, Chef Software, Inc
