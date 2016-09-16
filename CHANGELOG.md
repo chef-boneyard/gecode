@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of the gecode cookbook.
 
+## 3.0.0 (2016-09-15)
+- Testing updates
+- Require Chef 12.1+
+- Make sure file modes are strings
+- Remove support for EOL Debian / Ubuntu
+- Remove unused yum / apt cookbook dependencies
+- Add a source suite to Test Kitchen
+
 ## v2.1.3 (2016-07-28)
 
 - Fix checksum attribute for source installs
