@@ -6,7 +6,7 @@
 # Cookbook Name:: gecode
 # Recipe:: package
 #
-# Copyright:: Copyright (c) 2011 Chef Software, Inc.
+# Copyright:: Copyright (c) 2011-2016 Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,27 +23,7 @@
 case node['platform_family']
 when 'debian'
 
-  include_recipe 'apt'
-
-  # use chef apt repo for older releases
-  if (platform?('debian') && (node['platform_version'].to_f < 7.0)) ||
-     (platform?('ubuntu') && (node['platform_version'].to_f < 11.0))
-
-    # add Chef's apt repo to sources
-    apt_repository 'chef' do
-      uri 'http://apt.chef.io'
-      components ['main']
-      distribution node['lsb']['codename']
-      key '2940ABA983EF826A'
-      keyserver 'pgpkeys.mit.edu'
-      action :add
-    end
-
-  end
-
-  apt_package 'libgecode-dev' do
-    action :upgrade
-  end
+  package 'libgecode-dev'
 
 when 'rhel', 'fedora'
 
@@ -57,9 +37,7 @@ when 'rhel', 'fedora'
     raise 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
   end
 
-  package 'gecode-devel' do
-    action :install
-  end
+  package 'gecode-devel'
 
 else
   raise 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
