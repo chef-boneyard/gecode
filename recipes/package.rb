@@ -3,10 +3,10 @@
 # Author:: Nuo Yan (<nuo@chef.io>)
 # Author:: Joshua Timberman (<joshua@chef.io>)
 # Author:: Seth Chisamore (<schisamo@chef.io>)
-# Cookbook Name:: gecode
+# Cookbook:: gecode
 # Recipe:: package
 #
-# Copyright:: Copyright (c) 2011-2016 Chef Software, Inc.
+# Copyright:: 2011-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
