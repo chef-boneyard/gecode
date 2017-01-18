@@ -26,16 +26,9 @@ when 'debian'
   package 'libgecode-dev'
 
 when 'rhel', 'fedora'
+  raise 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform release' if node['platform_version'].to_f < 6.0
 
-  if platform?('redhat') || platform?('centos') || platform?('scientific')
-    if node['platform_version'].to_f < 6.0
-      raise 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
-    else
-      include_recipe 'yum-epel'
-    end
-  elsif platform?('fedora') && (node['platform_version'].to_f < 16.0)
-    raise 'This recipe does not yet support installing Gecode 3.5.0+ from packages on your platform'
-  end
+  include_recipe 'yum-epel' unless platform?('fedora')
 
   package 'gecode-devel'
 
