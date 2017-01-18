@@ -6,7 +6,7 @@ description      'Installs gecode'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '3.0.0'
 
-%w( debian ubuntu redhat centos scientific fedora mac_os_x ).each do |os|
+%w( debian ubuntu redhat centos scientific oracle fedora mac_os_x ).each do |os|
   supports os
 end
 
