@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the gecode cookbook.
 
+## 3.1.0 (2017-01-18)
+
+- Cookstyle fixes
+- Simplify the logic in the package recipe
+- Add support for Oracle Linux
+
 ## 3.0.0 (2016-09-15)
 - Testing updates
 - Require Chef 12.1+
