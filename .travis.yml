@@ -20,7 +20,6 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=package-ubuntu-1204
   - INSTANCE=package-ubuntu-1404
   - INSTANCE=package-ubuntu-1604
   - INSTANCE=package-centos-6
