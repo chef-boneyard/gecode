@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the gecode cookbook.
 
+## 3.1.1 (2017-04-26)
+
+- Test with Local Delivery and not Rake
+- Use standardize Apache 2 license string
+
 ## 3.1.0 (2017-01-18)
 
 - Cookstyle fixes
